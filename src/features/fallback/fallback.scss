@@ -1,0 +1,22 @@
+.error-container {
+    text-align: center;
+    h1 {
+        font-size: 4rem;
+        color: #ff5722; /* Red color */
+    }
+
+    p {
+        font-size: 1.5rem;
+        margin: 20px 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: #007bff; /* Blue color */
+        font-weight: bold;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+}

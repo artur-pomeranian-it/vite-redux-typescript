@@ -1,0 +1,53 @@
+:root {
+    --background: 90deg, rgba(157, 156, 181, 0.8) 0%, rgba(130, 129, 195, 0.8) 18%, rgba(140, 140, 240, 0.8) 35%,
+        rgba(90, 164, 232, 0.8) 63%, rgba(144, 232, 250, 0.8) 100%;
+    --card-background: white;
+    --card-color: black;
+}
+
+body {
+    background: rgba(157, 156, 181, 0.8);
+    background: linear-gradient(var(--background));
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1rem min(1fr, 65rem) 1rem;
+    grid-template-areas: ". main .";
+}
+.wrapper > * {
+    grid-area: main;
+}
+
+.card {
+    display: inline-block;
+    border: 0.1rem solid var(--card-color);
+    border-radius: 0.5rem;
+    padding: 1rem 1.5rem;
+    margin: 1rem;
+    background-color: var(--card-background);
+    color: var(--card-color);
+}
+
+.card--dark {
+    --card-background: black;
+    --card-color: white;
+}
+
+nav > ul {
+    --nav-border: black;
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    > li {
+        > a {
+            border-bottom: 0.2rem solid var(--nav-border);
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            color: inherit;
+            &.active {
+                --nav-border: white;
+            }
+        }
+    }
+}
