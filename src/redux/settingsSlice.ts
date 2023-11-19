@@ -2,11 +2,11 @@ import { createSlice } from '@reduxjs/toolkit';
 import { RootState } from './store';
 
 export interface SettingsState {
-  background: 'dark' | 'light';
+  backgroundColor: 'dark' | 'light';
 }
 
-const initialState: SettingsState = {
-  background: 'light',
+export const initialState: SettingsState = {
+  backgroundColor: 'light',
 };
 
 const settingsSlice = createSlice({
@@ -14,11 +14,12 @@ const settingsSlice = createSlice({
   name: 'settings',
   reducers: {
     toggleBackgroundColor: (state) => {
-      state.background = state.background === 'dark' ? 'light' : 'dark';
+      state.backgroundColor =
+        state.backgroundColor === 'dark' ? 'light' : 'dark';
     },
   },
 });
 export const { toggleBackgroundColor } = settingsSlice.actions;
 export const selectBackgroundColor = (state: RootState) =>
-  state.settings.background;
+  state.settings.backgroundColor;
 export const settingsReducer = settingsSlice.reducer;
