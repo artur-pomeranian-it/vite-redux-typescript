@@ -9,6 +9,9 @@ import {
   useSearchParams,
 } from 'react-router-dom';
 
+// Documentation
+// https://blog.logrocket.com/use-state-url-persist-state-usesearchparams/#usesearchparamsstate-hook
+
 export const ToDos = () => {
   const [todos, setTodos] = useState<ToDo[]>([]);
   const [searchParams, setParams] = useSearchParams();

@@ -1,6 +1,7 @@
 import { NavLink, Outlet, useLocation } from 'react-router-dom';
 
 export function Dashboard() {
+  // https://blog.logrocket.com/use-state-url-persist-state-usesearchparams/#usesearchparamsstate-hook
   const location = useLocation();
   return (
     <>
