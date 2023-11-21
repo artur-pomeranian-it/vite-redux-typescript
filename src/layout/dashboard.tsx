@@ -1,12 +1,16 @@
-import { NavLink, Outlet } from 'react-router-dom';
+import { NavLink, Outlet, useLocation } from 'react-router-dom';
 
 export function Dashboard() {
+  const location = useLocation();
   return (
     <>
       <nav>
         <ul>
           <li>
-            <NavLink to="/agenda">agenda</NavLink>
+            <NavLink to={`/agenda${location.search}`}>agenda</NavLink>
+          </li>
+          <li>
+            <NavLink to={`/todos${location.search}`}>todos</NavLink>
           </li>
           <li>
             <NavLink to="/settings">settings</NavLink>

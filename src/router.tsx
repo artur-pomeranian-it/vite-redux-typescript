@@ -4,6 +4,7 @@ import { Dashboard } from './layout/dashboard.tsx';
 import { Cards } from './features/cards/cards.tsx';
 import { Settings } from './features/settings/settings.tsx';
 import { Agenda } from './layout/agenda.tsx';
+import { ToDos } from './features/todos/todos.tsx';
 
 export const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ export const router = createBrowserRouter([
       {
         path: '/cards',
         element: <Cards />,
+      },
+      {
+        path: '/todos',
+        element: <ToDos />,
       },
       {
         path: '/settings',

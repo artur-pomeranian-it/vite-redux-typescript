@@ -7,16 +7,23 @@
 
 body {
     background: rgba(157, 156, 181, 0.8);
-    background: linear-gradient(var(--background));
+    background: linear-gradient(
+        90deg,
+        rgba(157, 156, 181, 0.8) 0%,
+        rgba(130, 129, 195, 0.8) 18%,
+        rgba(140, 140, 240, 0.8) 35%,
+        rgba(90, 164, 232, 0.8) 63%,
+        rgba(144, 232, 250, 0.8) 100%
+    );
 }
 
 .wrapper {
     display: grid;
     grid-template-columns: 1rem min(1fr, 65rem) 1rem;
     grid-template-areas: ". main .";
-}
-.wrapper > * {
-    grid-area: main;
+    > * {
+        grid-area: main;
+    }
 }
 
 .card {
